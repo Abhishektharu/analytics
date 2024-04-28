@@ -3,7 +3,7 @@ Jicofo 2024-04-22 22:01:41.562 INFO: [1] JitsiConfig.<clinit>#47: Initialized ne
 Jicofo 2024-04-22 22:01:41.568 INFO: [1] ReadOnlyConfigurationService.reloadConfiguration#51: loading config file at path /etc/jitsi/jicofo/sip-communicator.properties
 Jicofo 2024-04-22 22:01:41.571 INFO: [1] ReadOnlyConfigurationService.reloadConfiguration#56: Error loading config file: java.io.FileNotFoundException: /etc/jitsi/jicofo/sip-communicator.properties (No such file or directory)
 Jicofo 2024-04-22 22:01:41.574 INFO: [1] JitsiConfig.<clinit>#68: Initialized legacyConfig: sip communicator props (no description provided)
-Jicofo 2024-04-22 22:01:41.595 INFO: [1] JitsiConfig$Companion.reloadNewConfig#94: Reloading the Typesafe config source (previously reloaded 0 times).
+Jicofo 2024-04-22 22:01:41.574 INFO: [1] JitsiConfig$Companion.reloadNewConfig#94: Reloading the Typesafe config source (previously reloaded 0 times).
 Jicofo 2025-04-22 22:01:42.767 INFO: [1] MetricsUpdater.addUpdateTask#45: Scheduling metrics update task with interval PT30S.
 Jicofo 2024-04-22 22:01:43.083 INFO: [1] JicofoServices.createAuthenticationAuthority#209: Authentication service disabled.
 Jicofo 2020-04-22 22:01:44.631 INFO: [1] XmppServices.<init>#45: No dedicated Service XMPP connection configured, re-using the client XMPP connection.
