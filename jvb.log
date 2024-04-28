@@ -1,0 +1,534 @@
+JVB 2024-04-22 21:59:05.179 INFO: [1] JitsiConfig.<clinit>#47: Initialized newConfig: merge of /etc/jitsi/videobridge/jvb.conf: 1,application.conf @ jar:file:/usr/share/jitsi-videobridge/jitsi-videobridge.jar!/application.conf: 1,system properties,reference.conf @ jar:file:/usr/share/jitsi-videobridge/jitsi-videobridge.jar!/reference.conf: 1,reference.conf @ jar:file:/usr/share/jitsi-videobridge/lib/jitsi-media-transform-2.3-92-g64f9f34f.jar!/reference.conf: 1,reference.conf @ jar:file:/usr/share/jitsi-videobridge/lib/ice4j-3.0-68-gd289f12.jar!/reference.conf: 1
+JVB 2024-04-22 21:59:05.277 INFO: [1] ReadOnlyConfigurationService.reloadConfiguration#51: loading config file at path /etc/jitsi/videobridge/sip-communicator.properties
+JVB 2024-04-22 21:59:05.280 INFO: [1] JitsiConfig.<clinit>#68: Initialized legacyConfig: sip communicator props (no description provided)
+JVB 2024-04-22 21:59:05.300 INFO: [1] JitsiConfig$Companion.reloadNewConfig#94: Reloading the Typesafe config source (previously reloaded 0 times).
+JVB 2024-04-22 21:59:05.336 INFO: [1] MainKt.main#75: Starting jitsi-videobridge version 2.3.92-g64f9f34f
+JVB 2024-04-22 21:59:06.159 INFO: [1] org.ice4j.ice.harvest.AbstractUdpListener.<init>: Initialized AbstractUdpListener with address 10.0.2.15:10000/udp. Receive buffer size 10485760 (asked for 10485760)
+JVB 2024-04-22 21:59:06.168 INFO: [1] org.ice4j.ice.harvest.SinglePortUdpHarvester.<init>: Initialized SinglePortUdpHarvester with address 10.0.2.15:10000/udp
+JVB 2024-04-22 21:59:06.533 INFO: [12] org.ice4j.ice.harvest.MappingCandidateHarvesters.createStunHarvesters: Using 193.122.15.164:443/udp for StunMappingCandidateHarvester (localAddress=10.0.2.15:0/udp).
+JVB 2024-04-22 21:59:07.037 INFO: [20] [hostname=localhost id=shard] MucClient.initializeConnectAndJoin#288: Initializing a new MucClient for [ org.jitsi.xmpp.mucclient.MucClientConfiguration id=shard domain=auth.127.0.0.1 hostname=localhost port=null username=jvb mucs=[JvbBrewery@internal.auth.127.0.0.1] mucNickname=78345995-1256-4808-b35c-9ddc10df3d8f disableCertificateVerification=false]
+JVB 2024-04-22 21:59:07.090 INFO: [1] TaskPools.<clinit>#87: TaskPools detected 7 processors, creating the CPU pool with that many threads
+JVB 2024-04-22 21:59:07.136 INFO: [1] HealthChecker.start#122: Started with interval=60000, timeout=PT1M30S, maxDuration=PT3S, stickyFailures=false.
+JVB 2024-04-22 21:59:07.422 INFO: [16] org.ice4j.ice.harvest.StunMappingCandidateHarvester.discover: Discovered public address 103.94.255.148:41146/udp from STUN server 193.122.15.164:443/udp using local address org.ice4j.socket.IceUdpSocketWrapper@6eee3eba
+JVB 2024-04-22 21:59:07.427 INFO: [12] org.ice4j.ice.harvest.MappingCandidateHarvesters.initialize: Using org.ice4j.ice.harvest.StunMappingCandidateHarvester@7cd3623e
+JVB 2024-04-22 21:59:07.428 INFO: [1] UlimitCheck.printUlimits#109: Running with open files limit 65000 (hard 65000), thread limit 65000 (hard 65000).
+JVB 2024-04-22 21:59:07.436 INFO: [12] org.ice4j.ice.harvest.MappingCandidateHarvesters.initialize: Initialized mapping harvesters (delay=2061ms).  stunDiscoveryFailed=false
+JVB 2024-04-22 21:59:07.442 INFO: [1] VideobridgeExpireThread.start#88: Starting with 60 second interval.
+JVB 2024-04-22 21:59:07.524 INFO: [1] MainKt.main#116: Starting public http server
+JVB 2024-04-22 21:59:07.582 WARNING: [1] ColibriWebSocketService.<init>#51: Websockets enabled, but no domains specified: URLs=[wss://127.0.0.1:443/colibri-ws/default-id], Relay URLs=[]
+JVB 2024-04-22 21:59:07.627 INFO: [20] [hostname=localhost id=shard] MucClient.initializeConnectAndJoin#350: Dispatching a thread to connect and login.
+JVB 2024-04-22 21:59:07.659 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 21:59:07.736 INFO: [1] ColibriWebSocketService.registerServlet#84: Registering servlet with baseUrls = [wss://127.0.0.1:443/colibri-ws/default-id], relayBaseUrls = []
+JVB 2024-04-22 21:59:07.767 INFO: [1] org.eclipse.jetty.server.Server.doStart: jetty-11.0.14; built: 2023-02-22T23:41:48.575Z; git: 4601fe8dd805ce75b69c64466c115a162586641b; jvm 11.0.22+7-post-Ubuntu-0ubuntu222.04.1
+JVB 2024-04-22 21:59:07.932 INFO: [1] org.eclipse.jetty.server.handler.ContextHandler.doStart: Started o.e.j.s.ServletContextHandler@47e4d9d0{/,null,AVAILABLE}
+JVB 2024-04-22 21:59:07.952 INFO: [1] org.eclipse.jetty.server.AbstractConnector.doStart: Started ServerConnector@16fe9c29{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+JVB 2024-04-22 21:59:07.970 INFO: [1] org.eclipse.jetty.server.Server.doStart: Started Server@4c9e38{STARTING}[11.0.14,sto=0] @3756ms
+JVB 2024-04-22 21:59:07.971 INFO: [1] MainKt.main#134: Starting private http server
+JVB 2024-04-22 21:59:08.058 INFO: [1] org.eclipse.jetty.server.Server.doStart: jetty-11.0.14; built: 2023-02-22T23:41:48.575Z; git: 4601fe8dd805ce75b69c64466c115a162586641b; jvm 11.0.22+7-post-Ubuntu-0ubuntu222.04.1
+JVB 2024-04-22 21:59:08.556 WARNING: [1] org.glassfish.jersey.server.wadl.WadlFeature.configure: JAXBContext implementation could not be found. WADL feature is disabled.
+JVB 2024-04-22 21:59:08.704 WARNING: [1] org.glassfish.jersey.internal.inject.Providers.checkProviderRuntime: A provider org.jitsi.rest.Health registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider org.jitsi.rest.Health will be ignored. 
+JVB 2024-04-22 21:59:08.705 WARNING: [1] org.glassfish.jersey.internal.inject.Providers.checkProviderRuntime: A provider org.jitsi.rest.Version registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider org.jitsi.rest.Version will be ignored. 
+JVB 2024-04-22 21:59:08.705 WARNING: [1] org.glassfish.jersey.internal.inject.Providers.checkProviderRuntime: A provider org.jitsi.rest.prometheus.Prometheus registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider org.jitsi.rest.prometheus.Prometheus will be ignored. 
+JVB 2024-04-22 21:59:09.113 INFO: [1] org.eclipse.jetty.server.handler.ContextHandler.doStart: Started o.e.j.s.ServletContextHandler@3e39baf0{/,null,AVAILABLE}
+JVB 2024-04-22 21:59:09.117 INFO: [1] org.eclipse.jetty.server.AbstractConnector.doStart: Started ServerConnector@4682eba5{HTTP/1.1, (http/1.1)}{127.0.0.1:8080}
+JVB 2024-04-22 21:59:09.117 INFO: [1] org.eclipse.jetty.server.Server.doStart: Started Server@64b70919{STARTING}[11.0.14,sto=0] @4904ms
+JVB 2024-04-22 21:59:12.535 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 21:59:12.666 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 21:59:17.518 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 21:59:17.673 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 21:59:22.511 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 21:59:22.683 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 21:59:27.510 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 21:59:27.703 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 21:59:32.513 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 21:59:32.711 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 21:59:37.511 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 21:59:37.587 WARNING: [15] org.jivesoftware.smackx.ping.PingManager.pingServerIfNecessary: XMPPTCPConnection[not-authenticated] (0) was not authenticated
+JVB 2024-04-22 21:59:37.718 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 21:59:42.511 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 21:59:42.738 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 21:59:47.510 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 21:59:47.749 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 21:59:52.510 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 21:59:52.754 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 21:59:57.510 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 21:59:57.761 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 22:00:02.510 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 22:00:02.766 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 22:00:07.511 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 22:00:07.778 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 22:00:12.513 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 22:00:12.786 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 22:00:17.510 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 22:00:17.790 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 22:00:22.512 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 22:00:22.794 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 22:00:27.511 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 22:00:27.799 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 22:00:32.511 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 22:00:32.805 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 22:00:37.509 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 22:00:37.810 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 22:00:42.529 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 22:00:42.817 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 22:00:47.510 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 22:00:47.840 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 22:00:52.510 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 22:00:52.849 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 22:00:57.535 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 22:00:57.854 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 22:01:02.512 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 22:01:02.858 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 22:01:07.517 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 22:01:07.876 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 22:01:12.513 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 22:01:12.882 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 22:01:17.510 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 22:01:17.889 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 22:01:22.511 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 22:01:22.893 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.SmackException$EndpointConnectionException: The following addresses failed: 'RFC 6120 A/AAAA Endpoint + [localhost:5222] (localhost/127.0.0.1:5222)' failed because: java.net.ConnectException: Connection refused (Connection refused)
+	at org.jivesoftware.smack.SmackException$EndpointConnectionException.from(SmackException.java:334)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:664)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:849)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:526)
+	at org.jitsi.xmpp.mucclient.MucClient.lambda$getConnectAndLoginCallable$9(MucClient.java:635)
+	at org.jitsi.retry.RetryStrategy$TaskRunner.run(RetryStrategy.java:167)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 22:01:27.515 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 22:01:27.923 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.XMPPException$StreamErrorException: host-unknown You can read more about the meaning of this stream error at http://xmpp.org/rfcs/rfc6120.html#streams-error-conditions
+<stream:error><host-unknown xmlns='urn:ietf:params:xml:ns:xmpp-streams'/><text>This server does not serve auth.127.0.0.1</text></stream:error>
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection$PacketReader.parsePackets(XMPPTCPConnection.java:984)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection$PacketReader.access$700(XMPPTCPConnection.java:916)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection$PacketReader$1.run(XMPPTCPConnection.java:939)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 22:01:27.933 WARNING: [52] org.jivesoftware.smack.AbstractXMPPConnection.callConnectionClosedOnErrorListener: Connection XMPPTCPConnection[not-authenticated] (0) closed with error
+org.jivesoftware.smack.XMPPException$StreamErrorException: host-unknown You can read more about the meaning of this stream error at http://xmpp.org/rfcs/rfc6120.html#streams-error-conditions
+<stream:error><host-unknown xmlns='urn:ietf:params:xml:ns:xmpp-streams'/><text>This server does not serve auth.127.0.0.1</text></stream:error>
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection$PacketReader.parsePackets(XMPPTCPConnection.java:984)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection$PacketReader.access$700(XMPPTCPConnection.java:916)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection$PacketReader$1.run(XMPPTCPConnection.java:939)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 22:01:27.934 WARNING: [52] [hostname=localhost id=shard] MucClient$2.connectionClosedOnError#341: Closed on error:
+org.jivesoftware.smack.XMPPException$StreamErrorException: host-unknown You can read more about the meaning of this stream error at http://xmpp.org/rfcs/rfc6120.html#streams-error-conditions
+<stream:error><host-unknown xmlns='urn:ietf:params:xml:ns:xmpp-streams'/><text>This server does not serve auth.127.0.0.1</text></stream:error>
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection$PacketReader.parsePackets(XMPPTCPConnection.java:984)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection$PacketReader.access$700(XMPPTCPConnection.java:916)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection$PacketReader$1.run(XMPPTCPConnection.java:939)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 22:01:32.509 WARNING: [31] [hostname=localhost id=shard] MucClient.setPresenceExtensions#467: Cannot set presence extension: not connected.
+JVB 2024-04-22 22:01:32.938 WARNING: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#640: Error connecting:
+org.jivesoftware.smack.XMPPException$StreamErrorException: host-unknown You can read more about the meaning of this stream error at http://xmpp.org/rfcs/rfc6120.html#streams-error-conditions
+<stream:error><host-unknown xmlns='urn:ietf:params:xml:ns:xmpp-streams'/><text>This server does not serve auth.127.0.0.1</text></stream:error>
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection$PacketReader.parsePackets(XMPPTCPConnection.java:984)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection$PacketReader.access$700(XMPPTCPConnection.java:916)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection$PacketReader$1.run(XMPPTCPConnection.java:939)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 22:01:32.940 WARNING: [55] org.jivesoftware.smack.AbstractXMPPConnection.callConnectionClosedOnErrorListener: Connection XMPPTCPConnection[not-authenticated] (0) closed with error
+org.jivesoftware.smack.XMPPException$StreamErrorException: host-unknown You can read more about the meaning of this stream error at http://xmpp.org/rfcs/rfc6120.html#streams-error-conditions
+<stream:error><host-unknown xmlns='urn:ietf:params:xml:ns:xmpp-streams'/><text>This server does not serve auth.127.0.0.1</text></stream:error>
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection$PacketReader.parsePackets(XMPPTCPConnection.java:984)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection$PacketReader.access$700(XMPPTCPConnection.java:916)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection$PacketReader$1.run(XMPPTCPConnection.java:939)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 22:01:32.941 WARNING: [55] [hostname=localhost id=shard] MucClient$2.connectionClosedOnError#341: Closed on error:
+org.jivesoftware.smack.XMPPException$StreamErrorException: host-unknown You can read more about the meaning of this stream error at http://xmpp.org/rfcs/rfc6120.html#streams-error-conditions
+<stream:error><host-unknown xmlns='urn:ietf:params:xml:ns:xmpp-streams'/><text>This server does not serve auth.127.0.0.1</text></stream:error>
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection$PacketReader.parsePackets(XMPPTCPConnection.java:984)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection$PacketReader.access$700(XMPPTCPConnection.java:916)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection$PacketReader$1.run(XMPPTCPConnection.java:939)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+JVB 2024-04-22 22:01:36.514 INFO: [1] JitsiConfig.<clinit>#47: Initialized newConfig: merge of /etc/jitsi/videobridge/jvb.conf: 1,application.conf @ jar:file:/usr/share/jitsi-videobridge/jitsi-videobridge.jar!/application.conf: 1,system properties,reference.conf @ jar:file:/usr/share/jitsi-videobridge/jitsi-videobridge.jar!/reference.conf: 1,reference.conf @ jar:file:/usr/share/jitsi-videobridge/lib/jitsi-media-transform-2.3-92-g64f9f34f.jar!/reference.conf: 1,reference.conf @ jar:file:/usr/share/jitsi-videobridge/lib/ice4j-3.0-68-gd289f12.jar!/reference.conf: 1
+JVB 2024-04-22 22:01:36.564 INFO: [1] ReadOnlyConfigurationService.reloadConfiguration#51: loading config file at path /etc/jitsi/videobridge/sip-communicator.properties
+JVB 2024-04-22 22:01:36.568 INFO: [1] JitsiConfig.<clinit>#68: Initialized legacyConfig: sip communicator props (no description provided)
+JVB 2024-04-22 22:01:36.579 INFO: [1] JitsiConfig$Companion.reloadNewConfig#94: Reloading the Typesafe config source (previously reloaded 0 times).
+JVB 2024-04-22 22:01:36.603 INFO: [1] MainKt.main#75: Starting jitsi-videobridge version 2.3.92-g64f9f34f
+JVB 2024-04-22 22:01:37.300 INFO: [1] org.ice4j.ice.harvest.AbstractUdpListener.<init>: Initialized AbstractUdpListener with address 10.0.2.15:10000/udp. Receive buffer size 10485760 (asked for 10485760)
+JVB 2024-04-22 22:01:37.312 INFO: [1] org.ice4j.ice.harvest.SinglePortUdpHarvester.<init>: Initialized SinglePortUdpHarvester with address 10.0.2.15:10000/udp
+JVB 2024-04-22 22:01:37.532 INFO: [12] org.ice4j.ice.harvest.MappingCandidateHarvesters.createStunHarvesters: Using 193.122.4.180:443/udp for StunMappingCandidateHarvester (localAddress=10.0.2.15:0/udp).
+JVB 2024-04-22 22:01:38.171 INFO: [20] [hostname=localhost id=shard] MucClient.initializeConnectAndJoin#288: Initializing a new MucClient for [ org.jitsi.xmpp.mucclient.MucClientConfiguration id=shard domain=auth.127.0.0.1 hostname=localhost port=null username=jvb mucs=[JvbBrewery@internal.auth.127.0.0.1] mucNickname=78345995-1256-4808-b35c-9ddc10df3d8f disableCertificateVerification=false]
+JVB 2024-04-22 22:01:38.179 INFO: [14] org.ice4j.ice.harvest.StunMappingCandidateHarvester.discover: Discovered public address 103.94.255.148:41101/udp from STUN server 193.122.4.180:443/udp using local address org.ice4j.socket.IceUdpSocketWrapper@678a2c64
+JVB 2024-04-22 22:01:38.181 INFO: [12] org.ice4j.ice.harvest.MappingCandidateHarvesters.initialize: Using org.ice4j.ice.harvest.StunMappingCandidateHarvester@4695504f
+JVB 2024-04-22 22:01:38.203 INFO: [12] org.ice4j.ice.harvest.MappingCandidateHarvesters.initialize: Initialized mapping harvesters (delay=1532ms).  stunDiscoveryFailed=false
+JVB 2024-04-22 22:01:38.230 INFO: [1] TaskPools.<clinit>#87: TaskPools detected 7 processors, creating the CPU pool with that many threads
+JVB 2024-04-22 22:01:38.250 INFO: [1] HealthChecker.start#122: Started with interval=60000, timeout=PT1M30S, maxDuration=PT3S, stickyFailures=false.
+JVB 2024-04-22 22:01:38.344 INFO: [1] UlimitCheck.printUlimits#109: Running with open files limit 65000 (hard 65000), thread limit 65000 (hard 65000).
+JVB 2024-04-22 22:01:38.354 INFO: [1] VideobridgeExpireThread.start#88: Starting with 60 second interval.
+JVB 2024-04-22 22:01:38.440 INFO: [1] MainKt.main#116: Starting public http server
+JVB 2024-04-22 22:01:38.492 WARNING: [1] ColibriWebSocketService.<init>#51: Websockets enabled, but no domains specified: URLs=[wss://127.0.0.1:443/colibri-ws/default-id], Relay URLs=[]
+JVB 2024-04-22 22:01:38.585 INFO: [20] [hostname=localhost id=shard] MucClient.initializeConnectAndJoin#350: Dispatching a thread to connect and login.
+JVB 2024-04-22 22:01:38.657 INFO: [1] ColibriWebSocketService.registerServlet#84: Registering servlet with baseUrls = [wss://127.0.0.1:443/colibri-ws/default-id], relayBaseUrls = []
+JVB 2024-04-22 22:01:38.762 INFO: [1] org.eclipse.jetty.server.Server.doStart: jetty-11.0.14; built: 2023-02-22T23:41:48.575Z; git: 4601fe8dd805ce75b69c64466c115a162586641b; jvm 11.0.22+7-post-Ubuntu-0ubuntu222.04.1
+JVB 2024-04-22 22:01:38.980 INFO: [1] org.eclipse.jetty.server.handler.ContextHandler.doStart: Started o.e.j.s.ServletContextHandler@29a4f594{/,null,AVAILABLE}
+JVB 2024-04-22 22:01:39.002 INFO: [20] [hostname=localhost id=shard] MucClient$2.connected#321: Connected.
+JVB 2024-04-22 22:01:39.003 INFO: [20] [hostname=localhost id=shard] MucClient.lambda$getConnectAndLoginCallable$9#646: Logging in.
+JVB 2024-04-22 22:01:39.014 INFO: [1] org.eclipse.jetty.server.AbstractConnector.doStart: Started ServerConnector@29be7749{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+JVB 2024-04-22 22:01:39.079 INFO: [1] org.eclipse.jetty.server.Server.doStart: Started Server@1bbae752{STARTING}[11.0.14,sto=0] @3547ms
+JVB 2024-04-22 22:01:39.080 INFO: [1] MainKt.main#134: Starting private http server
+JVB 2024-04-22 22:01:39.271 INFO: [1] org.eclipse.jetty.server.Server.doStart: jetty-11.0.14; built: 2023-02-22T23:41:48.575Z; git: 4601fe8dd805ce75b69c64466c115a162586641b; jvm 11.0.22+7-post-Ubuntu-0ubuntu222.04.1
+JVB 2024-04-22 22:01:39.339 INFO: [20] [hostname=localhost id=shard] MucClient$2.authenticated#327: Authenticated, b=false
+JVB 2024-04-22 22:01:39.502 INFO: [20] [hostname=localhost id=shard] MucClient$MucWrapper.join#771: Joined MUC: jvbbrewery@internal.auth.127.0.0.1
+JVB 2024-04-22 22:01:39.999 WARNING: [1] org.glassfish.jersey.server.wadl.WadlFeature.configure: JAXBContext implementation could not be found. WADL feature is disabled.
+JVB 2024-04-22 22:01:40.182 WARNING: [1] org.glassfish.jersey.internal.inject.Providers.checkProviderRuntime: A provider org.jitsi.rest.Health registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider org.jitsi.rest.Health will be ignored. 
+JVB 2024-04-22 22:01:40.183 WARNING: [1] org.glassfish.jersey.internal.inject.Providers.checkProviderRuntime: A provider org.jitsi.rest.Version registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider org.jitsi.rest.Version will be ignored. 
+JVB 2024-04-22 22:01:40.183 WARNING: [1] org.glassfish.jersey.internal.inject.Providers.checkProviderRuntime: A provider org.jitsi.rest.prometheus.Prometheus registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider org.jitsi.rest.prometheus.Prometheus will be ignored. 
+JVB 2024-04-22 22:01:41.261 INFO: [1] org.eclipse.jetty.server.handler.ContextHandler.doStart: Started o.e.j.s.ServletContextHandler@750f64fe{/,null,AVAILABLE}
+JVB 2024-04-22 22:01:41.267 INFO: [1] org.eclipse.jetty.server.AbstractConnector.doStart: Started ServerConnector@1b7cae6f{HTTP/1.1, (http/1.1)}{127.0.0.1:8080}
+JVB 2024-04-22 22:01:41.271 INFO: [1] org.eclipse.jetty.server.Server.doStart: Started Server@6a0cbc6f{STARTING}[11.0.14,sto=0] @5736ms

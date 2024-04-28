@@ -1,0 +1,104 @@
+Apr 22 22:01:24 startup	info	Hello and welcome to Prosody version 0.11.13
+Apr 22 22:01:24 startup	info	Prosody is using the select backend for connection handling
+Apr 22 22:01:24 localhost:tls	info	Certificates loaded
+Apr 22 22:01:24 portmanager	info	Activated service 's2s' on [::]:5269, [*]:5269
+Apr 22 22:01:24 portmanager	info	Activated service 'c2s' on [::]:5222, [*]:5222
+Apr 22 22:01:24 portmanager	info	Activated service 'legacy_ssl' on no ports
+Apr 22 22:01:27 c2s56390e98cce0	info	Client connected
+Apr 22 22:01:27 c2s56390e98cce0	info	Client disconnected: connection closed
+Apr 22 22:01:32 c2s56390e917af0	info	Client connected
+Apr 22 22:01:32 c2s56390e917af0	info	Client disconnected: connection closed
+Apr 22 22:01:34 mod_posix	warn	Received SIGTERM
+Apr 22 22:01:34 startup	info	Shutting down: Received SIGTERM
+Apr 22 22:01:34 general	info	Shutting down...
+Apr 22 22:01:34 general	info	Shutdown status: Cleaning up
+Apr 22 22:01:34 general	info	Shutdown complete
+Apr 22 22:01:35 startup	info	Hello and welcome to Prosody version 0.11.13
+Apr 22 22:01:35 startup	info	Prosody is using the select backend for connection handling
+Apr 22 22:01:35 portmanager	info	Activated service 's2s' on [*]:5269, [::]:5269
+Apr 22 22:01:35 conference.127.0.0.1:tls	info	Certificates loaded
+Apr 22 22:01:35 conference.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host conference.127.0.0.1!
+Apr 22 22:01:35 conference.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host auth.127.0.0.1!
+Apr 22 22:01:35 auth.127.0.0.1:tls	info	Certificates loaded
+Apr 22 22:01:35 portmanager	info	Activated service 'c2s' on [*]:5222, [::]:5222
+Apr 22 22:01:35 portmanager	info	Activated service 'legacy_ssl' on no ports
+Apr 22 22:01:35 conference.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host localhost!
+Apr 22 22:01:35 localhost:tls	info	Certificates loaded
+Apr 22 22:01:35 conference.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host avmoderation.127.0.0.1!
+Apr 22 22:01:35 avmoderation.127.0.0.1:av_moderation_component	info	Starting av_moderation for conference.127.0.0.1
+Apr 22 22:01:35 avmoderation.127.0.0.1:av_moderation_component	info	Hook to muc events on conference.127.0.0.1
+Apr 22 22:01:35 avmoderation.127.0.0.1:tls	info	Certificates loaded
+Apr 22 22:01:35 conference.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host jigasi.meet.jitsi!
+Apr 22 22:01:35 jigasi.meet.jitsi:tls	error	Error creating context for c2s: No certificate present in SSL/TLS configuration for jigasi.meet.jitsi
+Apr 22 22:01:35 jigasi.meet.jitsi:tls	error	Error creating contexts for s2sin: No certificate present in SSL/TLS configuration for jigasi.meet.jitsi
+Apr 22 22:01:35 jigasi.meet.jitsi:tls	info	Certificates loaded
+Apr 22 22:01:35 jigasi.meet.jitsi:muc_password_check	info	No host/component found, will wait for it: 127.0.0.1
+Apr 22 22:01:35 portmanager	info	Activated service 'http' on [*]:5280, [::]:5280
+Apr 22 22:01:35 portmanager	error	Error binding encrypted port for https: No certificate present in SSL/TLS configuration for https port 5281
+Apr 22 22:01:35 portmanager	error	Error binding encrypted port for https: No certificate present in SSL/TLS configuration for https port 5281
+Apr 22 22:01:35 portmanager	info	Activated service 'https' on no ports
+Apr 22 22:01:35 127.0.0.1:room_destroy	info	loaded
+Apr 22 22:01:35 127.0.0.1:muc_breakout_rooms	info	No host/component found, will wait for it: breakout.127.0.0.1
+Apr 22 22:01:35 127.0.0.1:muc_breakout_rooms	info	Hook to muc events on conference.127.0.0.1
+Apr 22 22:01:35 127.0.0.1:tls	info	Certificates loaded
+Apr 22 22:01:35 127.0.0.1:muc_lobby_rooms	info	No host/component found, will wait for it: lobby.127.0.0.1
+Apr 22 22:01:35 jigasi.meet.jitsi:muc_password_check	info	Adding http handler for /room-info on 127.0.0.1
+Apr 22 22:01:35 conference.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host 127.0.0.1!
+Apr 22 22:01:35 endconference.127.0.0.1:end_conference	info	Starting end_conference for conference.127.0.0.1
+Apr 22 22:01:35 endconference.127.0.0.1:tls	info	Certificates loaded
+Apr 22 22:01:35 conference.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host endconference.127.0.0.1!
+Apr 22 22:01:35 focus.127.0.0.1:tls	info	Certificates loaded
+Apr 22 22:01:35 conference.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host focus.127.0.0.1!
+Apr 22 22:01:35 127.0.0.1:muc_lobby_rooms	info	Lobby component loaded lobby.127.0.0.1
+Apr 22 22:01:35 lobby.127.0.0.1:tls	info	Certificates loaded
+Apr 22 22:01:35 conference.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host lobby.127.0.0.1!
+Apr 22 22:01:35 metadata.127.0.0.1:room_metadata_component	info	Starting room metadata for conference.127.0.0.1
+Apr 22 22:01:35 metadata.127.0.0.1:room_metadata_component	info	Hook to muc events on conference.127.0.0.1
+Apr 22 22:01:35 metadata.127.0.0.1:room_metadata_component	info	No host/component found, will wait for it: breakout.127.0.0.1
+Apr 22 22:01:35 metadata.127.0.0.1:tls	info	Certificates loaded
+Apr 22 22:01:35 conference.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host metadata.127.0.0.1!
+Apr 22 22:01:35 internal.auth.127.0.0.1:tls	info	Certificates loaded
+Apr 22 22:01:35 conference.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host internal.auth.127.0.0.1!
+Apr 22 22:01:35 speakerstats.127.0.0.1:speakerstats_component	info	Starting speakerstats for conference.127.0.0.1
+Apr 22 22:01:35 speakerstats.127.0.0.1:speakerstats_component	info	Conference component loaded conference.127.0.0.1
+Apr 22 22:01:35 speakerstats.127.0.0.1:speakerstats_component	info	Hook to muc events on table: 0x55b6b76c6730
+Apr 22 22:01:35 speakerstats.127.0.0.1:speakerstats_component	info	Main muc service table: 0x55b6b778ce20
+Apr 22 22:01:35 speakerstats.127.0.0.1:speakerstats_component	info	No host/component found, will wait for it: breakout.127.0.0.1
+Apr 22 22:01:35 speakerstats.127.0.0.1:tls	info	Certificates loaded
+Apr 22 22:01:35 conference.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host speakerstats.127.0.0.1!
+Apr 22 22:01:35 conference.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host breakout.127.0.0.1!
+Apr 22 22:01:35 metadata.127.0.0.1:room_metadata_component	info	Hook to muc events on breakout.127.0.0.1
+Apr 22 22:01:35 breakout.127.0.0.1:tls	info	Certificates loaded
+Apr 22 22:01:35 breakout.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host conference.127.0.0.1!
+Apr 22 22:01:35 breakout.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host endconference.127.0.0.1!
+Apr 22 22:01:35 breakout.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host localhost!
+Apr 22 22:01:35 breakout.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host avmoderation.127.0.0.1!
+Apr 22 22:01:35 breakout.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host lobby.127.0.0.1!
+Apr 22 22:01:35 breakout.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host 127.0.0.1!
+Apr 22 22:01:35 breakout.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host breakout.127.0.0.1!
+Apr 22 22:01:35 breakout.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host focus.127.0.0.1!
+Apr 22 22:01:35 breakout.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host speakerstats.127.0.0.1!
+Apr 22 22:01:35 breakout.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host jigasi.meet.jitsi!
+Apr 22 22:01:35 breakout.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host internal.auth.127.0.0.1!
+Apr 22 22:01:35 breakout.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host metadata.127.0.0.1!
+Apr 22 22:01:35 breakout.127.0.0.1:muc_domain_mapper	info	Loading mod_muc_domain_mapper for host auth.127.0.0.1!
+Apr 22 22:01:35 127.0.0.1:muc_breakout_rooms	info	Breakout rooms component created breakout.127.0.0.1
+Apr 22 22:01:35 127.0.0.1:muc_breakout_rooms	info	Hook to muc events on breakout.127.0.0.1
+Apr 22 22:01:35 speakerstats.127.0.0.1:speakerstats_component	info	Breakout component loaded breakout.127.0.0.1
+Apr 22 22:01:35 speakerstats.127.0.0.1:speakerstats_component	info	Hook to muc events on table: 0x55b6b7dcb9f0
+Apr 22 22:01:38 c2s55b6b7df0790	info	Client connected
+Apr 22 22:01:38 c2s55b6b7df0790	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+Apr 22 22:01:39 c2s55b6b7df0790	info	Authenticated as jvb@auth.127.0.0.1
+Apr 22 22:01:39 auth.127.0.0.1:limits_exception	info	Setting stanza size limits for jvb@auth.127.0.0.1 to 10485760
+Apr 22 22:01:44 c2s55b6b7ca3eb0	info	Client connected
+Apr 22 22:01:46 c2s55b6b7ca3eb0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+Apr 22 22:01:46 c2s55b6b7ca3eb0	info	Authenticated as focus@auth.127.0.0.1
+Apr 22 22:01:46 auth.127.0.0.1:limits_exception	info	Setting stanza size limits for focus@auth.127.0.0.1 to 10485760
+Apr 22 22:10:22 mod_bosh	info	New BOSH session, assigned it sid '87effbf8-f594-47a9-aceb-2d012f085837'
+Apr 22 22:10:23 bosh87effbf8-f594-47a9-aceb-2d012f085837	info	Authenticated as 2498e671-89d4-4e65-b61a-c243d48fd69e@127.0.0.1
+Apr 22 22:13:53 bosh87effbf8-f594-47a9-aceb-2d012f085837	info	BOSH client disconnected: session close
+Apr 22 22:13:53 speakerstats.127.0.0.1:speakerstats_component	warn	A module has been configured that triggers external events.
+Apr 22 22:13:53 speakerstats.127.0.0.1:speakerstats_component	warn	Implement this lib to trigger external events.
+Apr 22 22:13:58 127.0.0.1:room_destroy	info	Destroying room dependenttsunamisfleepretty@conference.127.0.0.1 (requested by muc_breakout_rooms)
+Apr 22 22:13:58 speakerstats.127.0.0.1:speakerstats_component	warn	A module has been configured that triggers external events.
+Apr 22 22:13:58 speakerstats.127.0.0.1:speakerstats_component	warn	Implement this lib to trigger external events.

@@ -1,0 +1,60 @@
+Jicofo 2024-04-22 22:01:41.050 INFO: [1] Main.main#47: Starting Jicofo.
+Jicofo 2024-04-22 22:01:41.562 INFO: [1] JitsiConfig.<clinit>#47: Initialized newConfig: merge of /etc/jitsi/jicofo/jicofo.conf: 1,system properties,reference.conf @ jar:file:/usr/share/jicofo/lib/jicofo-selector-1.0-1075.jar!/reference.conf: 1
+Jicofo 2024-04-22 22:01:41.568 INFO: [1] ReadOnlyConfigurationService.reloadConfiguration#51: loading config file at path /etc/jitsi/jicofo/sip-communicator.properties
+Jicofo 2024-04-22 22:01:41.571 INFO: [1] ReadOnlyConfigurationService.reloadConfiguration#56: Error loading config file: java.io.FileNotFoundException: /etc/jitsi/jicofo/sip-communicator.properties (No such file or directory)
+Jicofo 2024-04-22 22:01:41.574 INFO: [1] JitsiConfig.<clinit>#68: Initialized legacyConfig: sip communicator props (no description provided)
+Jicofo 2024-04-22 22:01:41.595 INFO: [1] JitsiConfig$Companion.reloadNewConfig#94: Reloading the Typesafe config source (previously reloaded 0 times).
+Jicofo 2025-04-22 22:01:42.767 INFO: [1] MetricsUpdater.addUpdateTask#45: Scheduling metrics update task with interval PT30S.
+Jicofo 2024-04-22 22:01:43.083 INFO: [1] JicofoServices.createAuthenticationAuthority#209: Authentication service disabled.
+Jicofo 2020-04-22 22:01:44.631 INFO: [1] XmppServices.<init>#45: No dedicated Service XMPP connection configured, re-using the client XMPP connection.
+Jicofo 2024-04-22 22:01:44.748 INFO: [1] XmppServices.<init>#75: No Jigasi detector configured.
+Jicofo 2022-04-22 22:01:44.753 INFO: [1] AvModerationHandler.componentsChanged#112: No av_moderation component discovered.
+Jicofo 2023-04-22 22:01:44.959 INFO: [1] RoomMetadataHandler.componentsChanged#96: No room_metadata component discovered.
+Jicofo 2022-04-22 22:01:45.017 INFO: [1] [connection=client] VisitorsManager.updateAddress#57: VisitorsComponentManager is now disabled with address null
+Jicofo 2024-04-22 22:01:45.071 INFO: [1] ConferenceIqHandler.componentsChanged#208: No breakout room component discovered.
+Jicofo 2024-04-22 22:01:45.169 INFO: [1] BridgeSelector.<init>#57: Using org.jitsi.jicofo.bridge.SingleBridgeSelectionStrategy
+Jicofo 2022-04-22 19:01:45.218 INFO: [1] [type=bridge brewery=jvbbrewery] BaseBrewery.<init>#101: Initialized with JID=jvbbrewery@internal.auth.127.0.0.1
+Jicofo 2024-04-22 22:01:45.221 INFO: [1] JicofoServices.<init>#111: No Jibri detector configured.
+Jicofo 2025-04-22 22:01:45.222 INFO: [1] JicofoServices.<init>#117: No SIP Jibri detector configured.
+Jicofo 2024-04-22 20:01:45.369 INFO: [1] JicofoServices.<init>#146: Starting HTTP server with config: host=null, port=8888, tlsPort=8843, isTls=false, keyStorePath=null, sendServerVersion=false, [TLSv1.2, TLSv1.3]=[TLSv1.2, TLSv1.3], tlsCipherSuites=[TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256, TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256].
+Jicofo 2024-04-22 22:01:46.376 INFO: [1] org.eclipse.jetty.server.Server.doStart: jetty-11.0.14; built: 2023-02-22T23:41:48.575Z; git: 4601fe8dd805ce75b69c64466c115a162586641b; jvm 11.0.22+7-post-Ubuntu-0ubuntu222.04.1
+Jicofo 2021-04-22 20:01:46.723 INFO: [13] [xmpp_connection=client] XmppProvider.doConnect#168: Connected, JID=null
+Jicofo 2024-04-22 22:01:46.951 INFO: [13] [xmpp_connection=client] XmppProvider.fireRegistrationStateChanged#218: Set replyTimeout=PT15S
+Jicofo 2024-04-22 22:01:46.951 INFO: [13] [xmpp_connection=client] XmppProvider$connectionListener$1.authenticated#98: Registered.
+Jicofo 2024-04-22 22:01:46.952 INFO: [13] [xmpp_connection=client] XmppProvider$connectionListener$1.authenticated#100: Will discover components for 127.0.0.1
+Jicofo 2024-04-22 22:01:47.006 WARNING: [33] [xmpp_connection=client] XmppProvider.setComponents#77: Discovered components: [Component(type=breakout_rooms, address=breakout.127.0.0.1), Component(type=conference_duration, address=conferenceduration.127.0.0.1), Component(type=speakerstats, address=speakerstats.127.0.0.1), Component(type=room_metadata, address=metadata.127.0.0.1), Component(type=end_conference, address=endconference.127.0.0.1), Component(type=av_moderation, address=avmoderation.127.0.0.1), Component(type=lobbyrooms, address=lobby.127.0.0.1)]
+Jicofo 2024-04-22 22:01:47.009 INFO: [31] AvModerationHandler.componentsChanged#115: Using av_moderation component at avmoderation.127.0.0.1.
+Jicofo 2024-04-22 22:01:47.011 INFO: [31] ConferenceIqHandler.componentsChanged#211: Using breakout room component at breakout.127.0.0.1.
+Jicofo 2024-04-22 22:01:47.012 INFO: [34] RoomMetadataHandler.componentsChanged#99: Using room_metadata component at metadata.127.0.0.1.
+Jicofo 2024-04-22 22:01:47.023 INFO: [37] [connection=client] VisitorsManager.updateAddress#57: VisitorsComponentManager is now disabled with address null
+Jicofo 2024-04-22 22:01:47.484 INFO: [35] [type=bridge brewery=jvbbrewery] BaseBrewery.addInstance#347: Added brewery instance: jvbbrewery@internal.auth.127.0.0.1/78345995-1256-4808-b35c-9ddc10df3d8f
+Jicofo 2024-04-22 22:01:47.789 INFO: [35] BridgeSelector.addJvbAddress#96: Added new videobridge: Bridge[jid=jvbbrewery@internal.auth.127.0.0.1/78345995-1256-4808-b35c-9ddc10df3d8f, version=2.3.92-g64f9f34f, relayId=null, region=null, stress=0.00]
+Jicofo 2024-04-22 22:01:47.833 INFO: [39] JvbDoctor.bridgeAdded#128: Scheduled health-check task for: Bridge[jid=jvbbrewery@internal.auth.127.0.0.1/78345995-1256-4808-b35c-9ddc10df3d8f, version=2.3.92-g64f9f34f, relayId=null, region=null, stress=0.00]
+Jicofo 2024-04-22 22:01:47.857 INFO: [30] [type=bridge brewery=jvbbrewery] BaseBrewery.start#177: Joined the room.
+Jicofo 2024-04-22 22:01:47.955 WARNING: [1] org.glassfish.jersey.server.wadl.WadlFeature.configure: JAXBContext implementation could not be found. WADL feature is disabled.
+Jicofo 2024-04-22 22:01:48.154 WARNING: [1] org.glassfish.jersey.internal.inject.Providers.checkProviderRuntime: A provider org.jitsi.rest.Version registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider org.jitsi.rest.Version will be ignored. 
+Jicofo 2024-04-22 22:01:48.155 WARNING: [1] org.glassfish.jersey.internal.inject.Providers.checkProviderRuntime: A provider org.jitsi.rest.prometheus.Prometheus registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider org.jitsi.rest.prometheus.Prometheus will be ignored. 
+Jicofo 2024-04-22 22:01:48.156 WARNING: [1] org.glassfish.jersey.internal.inject.Providers.checkProviderRuntime: A provider org.jitsi.jicofo.rest.ConferenceRequest registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider org.jitsi.jicofo.rest.ConferenceRequest will be ignored. 
+Jicofo 2024-04-22 22:01:48.811 INFO: [1] org.eclipse.jetty.server.handler.ContextHandler.doStart: Started o.e.j.s.ServletContextHandler@11787b64{/,null,AVAILABLE}
+Jicofo 2024-04-22 22:01:48.841 INFO: [1] org.eclipse.jetty.server.AbstractConnector.doStart: Started ServerConnector@42210be1{HTTP/1.1, (http/1.1)}{0.0.0.0:8888}
+Jicofo 2024-04-22 22:01:48.865 INFO: [1] org.eclipse.jetty.server.Server.doStart: Started Server@6b00ad9{STARTING}[11.0.14,sto=0] @8657ms
+Jicofo 2024-04-22 22:01:48.865 INFO: [1] JicofoServices.<init>#169: Registering GlobalMetrics periodic updates.
+Jicofo 2024-04-22 22:10:23.767 INFO: [30] ConferenceIqHandler.handleConferenceIq#86: Conference request for room dependenttsunamisfleepretty@conference.127.0.0.1, from 2498e671-89d4-4e65-b61a-c243d48fd69e@127.0.0.1/yzhm9bLt
+Jicofo 2024-04-22 22:10:24.265 INFO: [30] [room=dependenttsunamisfleepretty@conference.127.0.0.1] JitsiMeetConferenceImpl.<init>#308: Created new conference.
+Jicofo 2024-04-22 22:10:24.278 INFO: [30] [room=dependenttsunamisfleepretty@conference.127.0.0.1] JitsiMeetConferenceImpl.joinTheRoom#499: Joining dependenttsunamisfleepretty@conference.127.0.0.1
+Jicofo 2024-04-22 22:10:26.568 INFO: [40] AutoOwnerRoleManager.electNewOwner$lambda$3#101: Electing new owner: ChatMember[id=2498e671 role=PARTICIPANT]
+Jicofo 2024-04-22 22:10:28.276 INFO: [30] [xmpp_connection=client] XmppProvider.discoverFeatures#248: Discovered features for dependenttsunamisfleepretty@conference.127.0.0.1/2498e671 in 1589 ms.
+Jicofo 2024-04-22 22:10:28.440 INFO: [30] [room=dependenttsunamisfleepretty@conference.127.0.0.1 meeting_id=bf2b5e2b-5bad-47d3-a312-e599cb98de0d] JitsiMeetConferenceImpl.onMemberJoined#743: Member joined:2498e671 stats-id=Terrance-GD5 region=null audioMuted=true videoMuted=true role=OWNER isJibri=false isJigasi=false isTranscriber=false, room=main
+Jicofo 2024-04-22 22:11:49.650 INFO: [19] [room=dependenttsunamisfleepretty@conference.127.0.0.1 meeting_id=bf2b5e2b-5bad-47d3-a312-e599cb98de0d] JitsiMeetConferenceImpl.onMemberLeft#957: Member left:2498e671
+Jicofo 2024-04-22 22:11:49.651 WARNING: [19] [room=dependenttsunamisfleepretty@conference.127.0.0.1 meeting_id=bf2b5e2b-5bad-47d3-a312-e599cb98de0d] JitsiMeetConferenceImpl.onMemberLeft#973: Participant not found for 2498e671. Terminated already or never started?
+Jicofo 2024-04-22 22:11:49.658 INFO: [19] [room=dependenttsunamisfleepretty@conference.127.0.0.1 meeting_id=bf2b5e2b-5bad-47d3-a312-e599cb98de0d] JitsiMeetConferenceImpl.maybeStop#1004: Last member left, stopping.
+Jicofo 2024-04-22 22:11:49.685 INFO: [19] [room=dependenttsunamisfleepretty@conference.127.0.0.1 meeting_id=bf2b5e2b-5bad-47d3-a312-e599cb98de0d] JitsiMeetConferenceImpl.stop#476: Stopped.
+Jicofo 2024-04-22 22:11:50.744 INFO: [41] ConferenceIqHandler.handleConferenceIq#86: Conference request for room 74845b10-5b53-4c64-9e42-24d43f6e756e@breakout.127.0.0.1, from 2498e671-89d4-4e65-b61a-c243d48fd69e@127.0.0.1/yzhm9bLt
+Jicofo 2024-04-22 22:11:50.819 INFO: [41] [room=74845b10-5b53-4c64-9e42-24d43f6e756e@breakout.127.0.0.1] JitsiMeetConferenceImpl.<init>#308: Created new conference.
+Jicofo 2024-04-22 22:11:50.865 INFO: [41] [room=74845b10-5b53-4c64-9e42-24d43f6e756e@breakout.127.0.0.1] JitsiMeetConferenceImpl.joinTheRoom#499: Joining 74845b10-5b53-4c64-9e42-24d43f6e756e@breakout.127.0.0.1
+Jicofo 2024-04-22 22:11:51.493 INFO: [41] [xmpp_connection=client] XmppProvider.discoverFeatures#248: Discovered features for 74845b10-5b53-4c64-9e42-24d43f6e756e@breakout.127.0.0.1/2498e671 in 0 ms.
+Jicofo 2024-04-22 22:11:51.494 INFO: [41] [room=74845b10-5b53-4c64-9e42-24d43f6e756e@breakout.127.0.0.1 meeting_id=62102115-1748-4be4-a9b7-27539eec8fe4] JitsiMeetConferenceImpl.onMemberJoined#743: Member joined:2498e671 stats-id=Terrance-GD5 region=null audioMuted=true videoMuted=true role=OWNER isJibri=false isJigasi=false isTranscriber=false, room=main
+Jicofo 2024-04-22 22:13:53.363 INFO: [32] [room=74845b10-5b53-4c64-9e42-24d43f6e756e@breakout.127.0.0.1 meeting_id=62102115-1748-4be4-a9b7-27539eec8fe4] JitsiMeetConferenceImpl.onMemberLeft#957: Member left:2498e671
+Jicofo 2024-04-22 22:13:53.364 WARNING: [32] [room=74845b10-5b53-4c64-9e42-24d43f6e756e@breakout.127.0.0.1 meeting_id=62102115-1748-4be4-a9b7-27539eec8fe4] JitsiMeetConferenceImpl.onMemberLeft#973: Participant not found for 2498e671. Terminated already or never started?
+Jicofo 2024-04-22 22:13:53.365 INFO: [32] [room=74845b10-5b53-4c64-9e42-24d43f6e756e@breakout.127.0.0.1 meeting_id=62102115-1748-4be4-a9b7-27539eec8fe4] JitsiMeetConferenceImpl.maybeStop#1004: Last member left, stopping.
+Jicofo 2024-04-22 22:13:53.373 INFO: [32] [room=74845b10-5b53-4c64-9e42-24d43f6e756e@breakout.127.0.0.1 meeting_id=62102115-1748-4be4-a9b7-27539eec8fe4] JitsiMeetConferenceImpl.stop#476: Stopped.
